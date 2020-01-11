@@ -1,4 +1,9 @@
-h1
-  | Home#index
-p
-  | Find me in app/views/home/index.html.erb
+h1 Wikiったかぶり
+
+.p-main-info
+  p 検索でWikipediaから概要を表示します
+
+.p-search-form
+  = form_with url: home_path(0), method: :get, local: true do |f|
+    = f.text_field :q, placeholder: 'テキストを入力...'
+    button 検索
